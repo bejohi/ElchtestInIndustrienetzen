@@ -1,0 +1,259 @@
+root@Kalypso:~/Schreibtisch# ping 10.2.70.1
+PING 10.2.70.1 (10.2.70.1) 56(84) bytes of data.
+64 bytes from 10.2.70.1: icmp_seq=1 ttl=64 time=1.95 ms
+^C
+--- 10.2.70.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.950/1.950/1.950/0.000 ms
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -A -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:05 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+setup_target: failed to determine route to 10.2.56.101
+NSE: Script Post-scanning.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.71 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+root@Kalypso:~/Schreibtisch# ^C
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -A -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:06 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+Initiating ARP Ping Scan at 15:06
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:06, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:06
+Completed Parallel DNS resolution of 1 host. at 15:06, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:06
+Scanning 10.2.70.1 [1500 ports]
+Discovered open port 22/tcp on 10.2.70.1
+Completed SYN Stealth Scan at 15:07, 5.71s elapsed (1500 total ports)
+Initiating Service scan at 15:07
+Scanning 1 service on 10.2.70.1
+Completed Service scan at 15:07, 0.07s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.70.1
+NSE: Script scanning 10.2.70.1.
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.52s elapsed
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.00s elapsed
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.00s elapsed
+Nmap scan report for 10.2.70.1
+Host is up (0.00088s latency).
+Not shown: 1499 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9p1 Raspbian 10 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 1f:e9:85:59:e9:12:ca:8c:1e:fb:bd:13:b5:ef:40:fb (RSA)
+|   256 6a:ab:1f:b2:33:60:9d:86:0e:e5:2d:8c:0a:d4:22:5c (ECDSA)
+|_  256 09:f2:ce:a6:9c:18:57:fc:22:56:36:c9:99:34:b3:b3 (ED25519)
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.11, Linux 3.2 - 4.9
+Uptime guess: 24.275 days (since Sat Nov  9 08:31:00 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.88 ms 10.2.70.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.00s elapsed
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.00s elapsed
+Initiating NSE at 15:07
+Completed NSE at 15:07, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.86 seconds
+           Raw packets sent: 3038 (135.462KB) | Rcvd: 16 (1.022KB)
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:07 CET
+Initiating ARP Ping Scan at 15:07
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:07, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:07
+Completed Parallel DNS resolution of 1 host. at 15:07, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:07
+Scanning 10.2.70.1 [1500 ports]
+Discovered open port 22/tcp on 10.2.70.1
+Completed SYN Stealth Scan at 15:07, 6.00s elapsed (1500 total ports)
+Nmap scan report for 10.2.70.1
+Host is up (0.00097s latency).
+Not shown: 1499 filtered ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 19.22 seconds
+           Raw packets sent: 3003 (132.116KB) | Rcvd: 5 (204B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:08 CET
+Initiating ARP Ping Scan at 15:08
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:08, 0.03s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:08
+Completed Parallel DNS resolution of 1 host. at 15:08, 13.00s elapsed
+Initiating UDP Scan at 15:08
+Scanning 10.2.70.1 [1500 ports]
+Completed UDP Scan at 15:08, 31.12s elapsed (1500 total ports)
+Nmap scan report for 10.2.70.1
+Host is up (0.00091s latency).
+All 1500 scanned ports on 10.2.70.1 are open|filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 44.30 seconds
+           Raw packets sent: 3001 (85.542KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 22 -T4 -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:09 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating ARP Ping Scan at 15:09
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:09, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:09
+Completed Parallel DNS resolution of 1 host. at 15:09, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:09
+Scanning 10.2.70.1 [1 port]
+Discovered open port 22/tcp on 10.2.70.1
+Completed SYN Stealth Scan at 15:09, 0.04s elapsed (1 total ports)
+Initiating Service scan at 15:09
+Scanning 1 service on 10.2.70.1
+Completed Service scan at 15:09, 0.07s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.70.1
+NSE: Script scanning 10.2.70.1.
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.54s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Nmap scan report for 10.2.70.1
+Host is up (0.00086s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.9p1 Raspbian 10 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 1f:e9:85:59:e9:12:ca:8c:1e:fb:bd:13:b5:ef:40:fb (RSA)
+|   256 6a:ab:1f:b2:33:60:9d:86:0e:e5:2d:8c:0a:d4:22:5c (ECDSA)
+|_  256 09:f2:ce:a6:9c:18:57:fc:22:56:36:c9:99:34:b3:b3 (ED25519)
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.11, Linux 3.2 - 4.9
+Uptime guess: 24.277 days (since Sat Nov  9 08:31:00 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.86 ms 10.2.70.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Initiating NSE at 15:09
+Completed NSE at 15:09, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.17 seconds
+           Raw packets sent: 36 (3.374KB) | Rcvd: 12 (846B)
+root@Kalypso:~/Schreibtisch# nmap -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:12 CET
+Initiating ARP Ping Scan at 15:12
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:12, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:12
+Completed Parallel DNS resolution of 1 host. at 15:12, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:12
+Scanning 10.2.70.1 [1000 ports]
+Discovered open port 22/tcp on 10.2.70.1
+Completed SYN Stealth Scan at 15:12, 4.79s elapsed (1000 total ports)
+Nmap scan report for 10.2.70.1
+Host is up (0.00090s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 17.98 seconds
+           Raw packets sent: 2002 (88.072KB) | Rcvd: 4 (160B)
+root@Kalypso:~/Schreibtisch# nmap -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:13 CET
+Initiating ARP Ping Scan at 15:13
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:13, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:13
+Completed Parallel DNS resolution of 1 host. at 15:13, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:13
+Scanning 10.2.70.1 [1000 ports]
+Completed SYN Stealth Scan at 15:13, 21.10s elapsed (1000 total ports)
+Nmap scan report for 10.2.70.1
+Host is up (0.00086s latency).
+All 1000 scanned ports on 10.2.70.1 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 34.29 seconds
+           Raw packets sent: 2001 (88.028KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -v 10.2.70.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:14 CET
+Initiating ARP Ping Scan at 15:14
+Scanning 10.2.70.1 [1 port]
+Completed ARP Ping Scan at 15:14, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:14
+Completed Parallel DNS resolution of 1 host. at 15:14, 13.00s elapsed
+Initiating SYN Stealth Scan at 15:14
+Scanning 10.2.70.1 [1000 ports]
+Completed SYN Stealth Scan at 15:15, 21.10s elapsed (1000 total ports)
+Nmap scan report for 10.2.70.1
+Host is up (0.00088s latency).
+All 1000 scanned ports on 10.2.70.1 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 34.30 seconds
+           Raw packets sent: 2001 (88.028KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# 
