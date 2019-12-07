@@ -1,0 +1,134 @@
+PUT /logstash-syslog-2019.12.05/_mapping/_doc
+{
+  "properties": {
+    "ufw_action": {
+      "type": "keyword"
+    },
+    "ufw_dest_ip": {
+      "type": "ip"
+    },
+    "ufw_dst_port": {
+      "type": "long"
+    },
+    "ufw_id_data": {
+      "type": "keyword"
+    },
+    "ufw_interface": {
+      "type": "keyword"
+    },
+    "ufw_mac": {
+      "type": "keyword"
+    },
+    "ufw_pack_len": {
+      "type": "keyword"
+    },
+    "ufw_packetsynack": {
+      "type": "keyword"
+    },
+    "ufw_prec_data": {
+      "type": "keyword"
+    },
+    "ufw_protocol": {
+      "type": "keyword"
+    },
+    "ufw_res_data": {
+      "type": "keyword"
+    },
+    "ufw_src_ip": {
+      "type": "ip"
+    },
+    "ufw_src_port": {
+      "type": "long"
+    },
+    "ufw_tos_data": {
+      "type": "keyword"
+    },
+    "ufw_ttl_data": {
+      "type": "keyword"
+    },
+    "ufw_window_data": {
+      "type": "keyword"
+    },
+    "fortigate_devid": {
+      "type": "keyword"
+    },
+    "fortigate_devname": {
+      "type": "keyword"
+    },
+    "fortigate_dstcountry": {
+      "type": "keyword"
+    },
+    "fortigate_dstintf": {
+      "type": "keyword"
+    },
+    "fortigate_dstip": {
+      "type": "ip"
+    },
+    "fortigate_dstport": {
+      "type": "keyword"
+    },
+    "fortigate_duration": {
+      "type": "keyword"
+    },
+    "fortigate_logid": {
+      "type": "keyword"
+    },
+    "fortigate_level": {
+      "type": "keyword"
+    },
+    "fortigate_rcvdbyte": {
+      "type": "keyword"
+    },
+    "fortigate_policyid": {
+      "type": "keyword"
+    },
+    "fortigate_proto": {
+      "type": "keyword"
+    },
+    "fortigate_sentbyte": {
+      "type": "keyword"
+    },
+    "fortigate_sentpkt": {
+      "type": "keyword"
+    },
+    "fortigate_service": {
+      "type": "keyword"
+    },
+    "fortigate_sessionid": {
+      "type": "keyword"
+    },
+    "fortigate_srccountry": {
+      "type": "keyword"
+    },
+    "fortigate_srcintf": {
+      "type": "keyword"
+    },
+    "fortigate_srcport": {
+      "type": "keyword"
+    },
+    "fortigate_status": {
+      "type": "keyword"
+    },
+    "fortigate_subtype": {
+      "type": "keyword"
+    },
+    "fortigate_time": {
+      "type": "keyword"
+    },
+    "fortigate_trandisp": {
+      "type": "keyword"
+    },
+    "fortigate_type": {
+      "type": "keyword"
+    },
+    "fortigate_vd": {
+      "type": "keyword"
+    },
+    "fortigate_app": {
+      "type": "keyword"
+    },
+    "fortigate_srcip": {
+      "type": "ip"
+    }
+  }
+}
