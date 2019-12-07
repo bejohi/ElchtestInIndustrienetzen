@@ -1,33 +1,3 @@
-root@Kalypso:~/Schreibtisch# ping 10.2.70.1
-PING 10.2.70.1 (10.2.70.1) 56(84) bytes of data.
-64 bytes from 10.2.70.1: icmp_seq=1 ttl=64 time=1.95 ms
-^C
---- 10.2.70.1 ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 1.950/1.950/1.950/0.000 ms
-root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -A -v 10.2.56.101
-Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:05 CET
-NSE: Loaded 151 scripts for scanning.
-NSE: Script Pre-scanning.
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-setup_target: failed to determine route to 10.2.56.101
-NSE: Script Post-scanning.
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-Initiating NSE at 15:05
-Completed NSE at 15:05, 0.00s elapsed
-Read data files from: /usr/bin/../share/nmap
-WARNING: No targets were specified, so 0 hosts scanned.
-Nmap done: 0 IP addresses (0 hosts up) scanned in 0.71 seconds
-           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
-root@Kalypso:~/Schreibtisch# ^C
 root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -A -v 10.2.70.1
 Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 15:06 CET
 NSE: Loaded 151 scripts for scanning.
