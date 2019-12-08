@@ -1,0 +1,387 @@
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:02 CET
+Initiating ARP Ping Scan at 15:02
+Scanning 10.2.56.254 [1 port]
+Completed ARP Ping Scan at 15:02, 0.03s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:02
+Scanning 10.2.56.254 [1500 ports]
+Completed SYN Stealth Scan at 15:02, 31.10s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.254
+Host is up (0.00080s latency).
+All 1500 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.27 seconds
+           Raw packets sent: 3001 (132.028KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:02 CET
+Initiating ARP Ping Scan at 15:02
+Scanning 10.2.56.254 [1 port]
+Completed ARP Ping Scan at 15:02, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating UDP Scan at 15:02
+Scanning 10.2.56.254 [1500 ports]
+Completed UDP Scan at 15:03, 31.11s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.254
+Host is up (0.00081s latency).
+All 1500 scanned ports on 10.2.56.254 are open|filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.29 seconds
+           Raw packets sent: 3001 (85.542KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -T4 -v 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:03 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:03
+Completed NSE at 15:03, 0.00s elapsed
+Initiating NSE at 15:03
+Completed NSE at 15:03, 0.00s elapsed
+Initiating NSE at 15:03
+Completed NSE at 15:03, 0.00s elapsed
+Initiating ARP Ping Scan at 15:03
+Scanning 10.2.56.254 [1 port]
+Completed ARP Ping Scan at 15:03, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:03
+Scanning 10.2.56.254 [1000 ports]
+Completed SYN Stealth Scan at 15:04, 21.09s elapsed (1000 total ports)
+Initiating Service scan at 15:04
+Initiating OS detection (try #1) against 10.2.56.254
+Retrying OS detection (try #2) against 10.2.56.254
+NSE: Script scanning 10.2.56.254.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Nmap scan report for 10.2.56.254
+Host is up (0.00080s latency).
+All 1000 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.80 ms 10.2.56.254
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.78 seconds
+           Raw packets sent: 2049 (94.700KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:04 CET
+Initiating ARP Ping Scan at 15:04
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 15:04, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:04
+Scanning 10.2.56.1 [1500 ports]
+Discovered open port 443/tcp on 10.2.56.1
+Discovered open port 22/tcp on 10.2.56.1
+Discovered open port 541/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 15:04, 5.46s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.1
+Host is up (0.00031s latency).
+Not shown: 1494 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+113/tcp closed ident
+161/tcp closed snmp
+162/tcp closed snmptrap
+443/tcp open   https
+541/tcp open   uucp-rlogin
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 5.65 seconds
+           Raw packets sent: 2996 (131.808KB) | Rcvd: 8 (320B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:04 CET
+Initiating ARP Ping Scan at 15:04
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 15:04, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating UDP Scan at 15:04
+Scanning 10.2.56.1 [1500 ports]
+Completed UDP Scan at 15:05, 31.11s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.1
+Host is up (0.00018s latency).
+All 1500 scanned ports on 10.2.56.1 are open|filtered
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.31 seconds
+           Raw packets sent: 3001 (85.542KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A  -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:05 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Initiating ARP Ping Scan at 15:05
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 15:05, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:05
+Scanning 10.2.56.1 [1000 ports]
+Discovered open port 22/tcp on 10.2.56.1
+Discovered open port 443/tcp on 10.2.56.1
+Discovered open port 8009/tcp on 10.2.56.1
+Discovered open port 541/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 15:05, 4.09s elapsed (1000 total ports)
+Initiating Service scan at 15:05
+Scanning 4 services on 10.2.56.1
+Completed Service scan at 15:05, 14.07s elapsed (4 services on 1 host)
+Initiating OS detection (try #1) against 10.2.56.1
+Retrying OS detection (try #2) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 15:06
+Completed NSE at 15:06, 30.03s elapsed
+Initiating NSE at 15:06
+
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:07 CET
+Initiating ARP Ping Scan at 15:07
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 15:07, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:07
+Scanning 10.2.56.101 [1500 ports]
+Discovered open port 102/tcp on 10.2.56.101
+Increasing send delay for 10.2.56.101 from 0 to 5 due to 68 out of 169 dropped probes since last increase.
+Increasing send delay for 10.2.56.101 from 5 to 10 due to max_successful_tryno increase to 5
+Completed SYN Stealth Scan at 15:07, 18.20s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.101
+Host is up (0.00036s latency).
+Not shown: 1499 closed ports
+PORT    STATE SERVICE
+102/tcp open  iso-tsap
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 18.39 seconds
+           Raw packets sent: 1916 (84.288KB) | Rcvd: 1501 (60.032KB)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:07 CET
+Initiating ARP Ping Scan at 15:07
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 15:07, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating UDP Scan at 15:07
+Scanning 10.2.56.101 [1500 ports]
+Completed UDP Scan at 15:08, 31.11s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.101
+Host is up (0.00036s latency).
+All 1500 scanned ports on 10.2.56.101 are open|filtered
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.30 seconds
+           Raw packets sent: 3001 (85.542KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:08 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating ARP Ping Scan at 15:08
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 15:08, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:08
+Scanning 10.2.56.101 [1000 ports]
+Increasing send delay for 10.2.56.101 from 0 to 5 due to 67 out of 167 dropped probes since last increase.
+Increasing send delay for 10.2.56.101 from 5 to 10 due to max_successful_tryno increase to 5
+Completed SYN Stealth Scan at 15:08, 13.21s elapsed (1000 total ports)
+Initiating Service scan at 15:08
+Initiating OS detection (try #1) against 10.2.56.101
+NSE: Script scanning 10.2.56.101.
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Nmap scan report for 10.2.56.101
+Host is up (0.00047s latency).
+All 1000 scanned ports on 10.2.56.101 are closed
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Device type: printer|general purpose|security-misc
+Running: Intermec embedded, OpenBSD 2.X|3.X|4.X|5.X, Thales embedded
+OS CPE: cpe:/o:openbsd:openbsd:2.9 cpe:/o:openbsd:openbsd:3.2 cpe:/o:openbsd:openbsd:4 cpe:/o:openbsd:openbsd:5 cpe:/h:thales:ncipher_nethsm_500
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.47 ms 10.2.56.101
+
+NSE: Script Post-scanning.
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Initiating NSE at 15:08
+Completed NSE at 15:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.90 seconds
+           Raw packets sent: 1349 (60.762KB) | Rcvd: 1006 (40.474KB)
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:09 CET
+Initiating ARP Ping Scan at 15:09
+Scanning 10.2.56.254 [1 port]
+Completed ARP Ping Scan at 15:09, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:09
+Scanning 10.2.56.254 [1500 ports]
+Completed SYN Stealth Scan at 15:09, 31.10s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.254
+Host is up (0.00075s latency).
+All 1500 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.30 seconds
+           Raw packets sent: 3001 (132.028KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:10 CET
+Initiating ARP Ping Scan at 15:10
+Scanning 10.2.56.254 [1 port]
+Completed ARP Ping Scan at 15:10, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating UDP Scan at 15:10
+Scanning 10.2.56.254 [1500 ports]
+Completed UDP Scan at 15:10, 31.12s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.254
+Host is up (0.00077s latency).
+All 1500 scanned ports on 10.2.56.254 are open|filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 31.31 seconds
+           Raw packets sent: 3001 (85.542KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1500 -T4 -v 10.2.56.200
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:11 CET
+Initiating ARP Ping Scan at 15:11
+Scanning 10.2.56.200 [1 port]
+Completed ARP Ping Scan at 15:11, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating UDP Scan at 15:11
+Scanning 10.2.56.200 [1500 ports]
+Increasing send delay for 10.2.56.200 from 0 to 50 due to 62 out of 154 dropped probes since last increase.
+
+root@Kalypso:~/Schreibtisch# nmap -p 1-1500 -T4 -v 10.2.56.200
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:12 CET
+Initiating ARP Ping Scan at 15:12
+Scanning 10.2.56.200 [1 port]
+Completed ARP Ping Scan at 15:12, 0.04s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:12
+Scanning 10.2.56.200 [1500 ports]
+Discovered open port 445/tcp on 10.2.56.200
+Discovered open port 139/tcp on 10.2.56.200
+Discovered open port 135/tcp on 10.2.56.200
+Increasing send delay for 10.2.56.200 from 0 to 5 due to 36 out of 89 dropped probes since last increase.
+Discovered open port 81/tcp on 10.2.56.200
+Discovered open port 1001/tcp on 10.2.56.200
+Discovered open port 983/tcp on 10.2.56.200
+Discovered open port 16/tcp on 10.2.56.200
+Discovered open port 32/tcp on 10.2.56.200
+Discovered open port 102/tcp on 10.2.56.200
+Completed SYN Stealth Scan at 15:12, 8.25s elapsed (1500 total ports)
+Nmap scan report for 10.2.56.200
+Host is up (0.00046s latency).
+Not shown: 1491 closed ports
+PORT     STATE SERVICE
+16/tcp   open  unknown
+32/tcp   open  unknown
+81/tcp   open  hosts2-ns
+102/tcp  open  iso-tsap
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+983/tcp  open  unknown
+1001/tcp open  webpush
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 8.44 seconds
+           Raw packets sent: 1564 (68.800KB) | Rcvd: 1501 (60.064KB)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -T4 -v 10.2.56.200
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:12 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 15:12
+Completed NSE at 15:12, 0.00s elapsed
+Initiating NSE at 15:12
+Completed NSE at 15:12, 0.00s elapsed
+Initiating NSE at 15:12
+Completed NSE at 15:12, 0.00s elapsed
+Initiating ARP Ping Scan at 15:13
+Scanning 10.2.56.200 [1 port]
+Completed ARP Ping Scan at 15:13, 0.05s elapsed (1 total hosts)
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Initiating SYN Stealth Scan at 15:13
+Scanning 10.2.56.200 [1000 ports]
+Discovered open port 8888/tcp on 10.2.56.200
+Discovered open port 135/tcp on 10.2.56.200
+Discovered open port 445/tcp on 10.2.56.200
+Discovered open port 1001/tcp on 10.2.56.200
+Discovered open port 49152/tcp on 10.2.56.200
+Discovered open port 49159/tcp on 10.2.56.200
+Discovered open port 5357/tcp on 10.2.56.200
+Discovered open port 139/tcp on 10.2.56.200
+Discovered open port 2638/tcp on 10.2.56.200
+Discovered open port 32/tcp on 10.2.56.200
+Discovered open port 49153/tcp on 10.2.56.200
+Discovered open port 49154/tcp on 10.2.56.200
+Discovered open port 49155/tcp on 10.2.56.200
+Discovered open port 49160/tcp on 10.2.56.200
+Discovered open port 4002/tcp on 10.2.56.200
+Discovered open port 81/tcp on 10.2.56.200
+Completed SYN Stealth Scan at 15:13, 1.62s elapsed (1000 total ports)
+Initiating Service scan at 15:13
+Scanning 16 services on 10.2.56.200
+Service scan Timing: About 50.00% done; ETC: 15:14 (0:00:35 remaining)
+
+root@Kalypso:~/Schreibtisch# nmap 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:14 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.101
+Host is up (0.00084s latency).
+All 1000 scanned ports on 10.2.56.101 are closed
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Nmap done: 1 IP address (1 host up) scanned in 12.59 seconds
+root@Kalypso:~/Schreibtisch# nmap 10.2.56.254
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 15:18 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.254
+Host is up (0.00082s latency).
+All 1000 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap done: 1 IP address (1 host up) scanned in 21.27 seconds
+root@Kalypso:~/Schreibtisch# 

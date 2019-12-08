@@ -1,0 +1,599 @@
+root@Kalypso:~/Schreibtisch# nmap -p 1-1024 -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:42 CET
+Initiating ARP Ping Scan at 14:42
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 14:42, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:42
+Completed Parallel DNS resolution of 1 host. at 14:42, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:42
+Scanning 10.2.56.101 [1024 ports]
+Increasing send delay for 10.2.56.101 from 0 to 5 due to 67 out of 167 dropped probes since last increase.
+Discovered open port 102/tcp on 10.2.56.101
+Increasing send delay for 10.2.56.101 from 5 to 10 due to max_successful_tryno increase to 5
+Completed SYN Stealth Scan at 14:42, 13.52s elapsed (1024 total ports)
+Nmap scan report for 10.2.56.101
+Host is up (0.00037s latency).
+Not shown: 1023 closed ports
+PORT    STATE SERVICE
+102/tcp open  iso-tsap
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 26.74 seconds
+
+
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1024 -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:43 CET
+Initiating ARP Ping Scan at 14:43
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 14:43, 0.03s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:43
+Completed Parallel DNS resolution of 1 host. at 14:43, 13.00s elapsed
+Initiating UDP Scan at 14:43
+Scanning 10.2.56.101 [1024 ports]
+Completed UDP Scan at 14:43, 21.68s elapsed (1024 total ports)
+Nmap scan report for 10.2.56.101
+Host is up (0.00029s latency).
+All 1024 scanned ports on 10.2.56.101 are open|filtered
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 34.86 seconds
+           Raw packets sent: 2049 (58.858KB) | Rcvd: 1 (28B)
+
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 102 -T4 -v 10.2.56.101
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:45 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating ARP Ping Scan at 14:45
+Scanning 10.2.56.101 [1 port]
+Completed ARP Ping Scan at 14:45, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:45
+Completed Parallel DNS resolution of 1 host. at 14:45, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:45
+Scanning 10.2.56.101 [1 port]
+Discovered open port 102/tcp on 10.2.56.101
+Completed SYN Stealth Scan at 14:45, 0.03s elapsed (1 total ports)
+Initiating Service scan at 14:45
+Scanning 1 service on 10.2.56.101
+Completed Service scan at 14:45, 6.08s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.56.101
+Retrying OS detection (try #2) against 10.2.56.101
+NSE: Script scanning 10.2.56.101.
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.04s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Nmap scan report for 10.2.56.101
+Host is up (0.00046s latency).
+
+PORT    STATE SERVICE  VERSION
+102/tcp open  iso-tsap Siemens S7 PLC
+| s7-info: 
+|   Module: 6ES7 512-1SK01-0AB0 
+|   Basic Hardware: 6ES7 512-1SK01-0AB0 
+|   Version: 2.6.1
+|   System Name: ET 200SP-Station_1
+|   Module Type: PLC_1
+|   Serial Number: S C-JNM600662017
+|   Plant Identification:                                 
+|_  Copyright: Original Siemens Equipment
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: remote management|general purpose|specialized|printer
+Running (JUST GUESSING): Dell embedded (88%), OpenBSD 4.X|3.X|5.X (87%), Inova embedded (86%), Intermec embedded (85%), FreeBSD 6.X (85%), Rockwell Automation embedded (85%)
+OS CPE: cpe:/h:dell:remote_access_card:3.38 cpe:/h:dell:remote_access_card:4 cpe:/o:openbsd:openbsd:4 cpe:/o:openbsd:openbsd:3 cpe:/o:openbsd:openbsd:5 cpe:/o:freebsd:freebsd:6.1 cpe:/h:rockwellautomation:1761-net-eni
+Aggressive OS guesses: Dell Embedded Remote Access (ERA) Controller 3.38 or 4/I (88%), OpenBSD 4.4 - 4.6 (87%), Dell Remote Access Controller 4 (DRAC 4) (87%), OpenBSD 3.9 - 4.4 (87%), OpenBSD 5.2 - 5.3 (87%), OpenBSD 4.2 (86%), Inova OnTime Clock Version 1.2.P (86%), OpenBSD 4.9 - 5.4 (86%), OpenBSD 4.3 (86%), OpenBSD 5.4 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Randomized
+Service Info: Device: specialized
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.46 ms 10.2.56.101
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Initiating NSE at 14:45
+Completed NSE at 14:45, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 23.60 seconds
+           Raw packets sent: 40 (4.876KB) | Rcvd: 32 (1.828KB)
+
+
+root@Kalypso:~/Schreibtisch# nmap -p 1-1024 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:46 CET
+Initiating ARP Ping Scan at 14:46
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:46, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:46
+Completed Parallel DNS resolution of 1 host. at 14:47, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:47
+Scanning 10.2.56.1 [1024 ports]
+Discovered open port 22/tcp on 10.2.56.1
+Discovered open port 443/tcp on 10.2.56.1
+Discovered open port 541/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 14:47, 4.60s elapsed (1024 total ports)
+Nmap scan report for 10.2.56.1
+Host is up (0.00038s latency).
+Not shown: 1018 filtered ports
+PORT    STATE  SERVICE
+22/tcp  open   ssh
+113/tcp closed ident
+161/tcp closed snmp
+162/tcp closed snmptrap
+443/tcp open   https
+541/tcp open   uucp-rlogin
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 17.82 seconds
+           Raw packets sent: 2045 (89.964KB) | Rcvd: 9 (360B)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1024 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:47 CET
+Initiating ARP Ping Scan at 14:47
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:47, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:47
+Completed Parallel DNS resolution of 1 host. at 14:47, 13.00s elapsed
+Initiating UDP Scan at 14:47
+Scanning 10.2.56.1 [1024 ports]
+Completed UDP Scan at 14:48, 21.69s elapsed (1024 total ports)
+Nmap scan report for 10.2.56.1
+Host is up (0.00020s latency).
+All 1024 scanned ports on 10.2.56.1 are open|filtered
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 34.88 seconds
+           Raw packets sent: 2049 (58.858KB) | Rcvd: 1 (28B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 22 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:48 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:48
+Completed NSE at 14:48, 0.00s elapsed
+Initiating NSE at 14:48
+Completed NSE at 14:48, 0.00s elapsed
+Initiating NSE at 14:48
+Completed NSE at 14:48, 0.00s elapsed
+Initiating ARP Ping Scan at 14:48
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:48, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:48
+Completed Parallel DNS resolution of 1 host. at 14:48, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:48
+Scanning 10.2.56.1 [1 port]
+Discovered open port 22/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 14:48, 0.03s elapsed (1 total ports)
+Initiating Service scan at 14:48
+Scanning 1 service on 10.2.56.1
+Completed Service scan at 14:48, 6.01s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.56.1
+Retrying OS detection (try #2) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.25s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Nmap scan report for 10.2.56.1
+Host is up (0.00037s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-75seB
+| ssh-hostkey: 
+|   1024 d9:de:4e:2e:82:08:be:a5:9e:f7:40:b7:72:21:6a:80 (DSA)
+|_  1024 8a:31:a0:c4:b8:94:8f:4e:69:34:e2:e1:ec:49:36:a5 (RSA)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.80%I=7%D=12/3%Time=5DE667CA%P=x86_64-pc-linux-gnu%r(NULL
+SF:,E,"SSH-2\.0-75seB\n");
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose|firewall
+Running (JUST GUESSING): Linux 2.4.X|2.6.X (98%), Fortinet embedded (95%), D-Link embedded (93%), TRENDnet embedded (93%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:dlink:dwl-624%2b cpe:/h:dlink:dwl-2000ap cpe:/h:trendnet:tew-432brp
+Aggressive OS guesses: Tomato 1.27 - 1.28 (Linux 2.4.20) (98%), Linux 2.6.18 - 2.6.22 (98%), Fortinet FortiGate-50B or 310B firewall (95%), Fortinet FortiGate 100D firewall (94%), D-Link DWL-624+ or DWL-2000AP, or TRENDnet TEW-432BRP WAP (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.234 days (since Tue Dec  3 09:12:15 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: Broken little-endian incremental
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.37 ms 10.2.56.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.50 seconds
+           Raw packets sent: 82 (7.348KB) | Rcvd: 18 (1.436KB)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 113 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:49 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating ARP Ping Scan at 14:49
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:49, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:49
+Completed Parallel DNS resolution of 1 host. at 14:49, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:49
+Scanning 10.2.56.1 [1 port]
+Completed SYN Stealth Scan at 14:49, 0.04s elapsed (1 total ports)
+Initiating Service scan at 14:49
+Initiating OS detection (try #1) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Nmap scan report for 10.2.56.1
+Host is up (0.00024s latency).
+
+PORT    STATE  SERVICE VERSION
+113/tcp closed ident
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.24 ms 10.2.56.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.70 seconds
+           Raw packets sent: 17 (2.250KB) | Rcvd: 5 (434B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 161 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:49 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating NSE at 14:49
+Completed NSE at 14:49, 0.00s elapsed
+Initiating ARP Ping Scan at 14:49
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:49, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:49
+Completed Parallel DNS resolution of 1 host. at 14:50, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:50
+Scanning 10.2.56.1 [1 port]
+Completed SYN Stealth Scan at 14:50, 0.04s elapsed (1 total ports)
+Initiating Service scan at 14:50
+Initiating OS detection (try #1) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Nmap scan report for 10.2.56.1
+Host is up (0.00021s latency).
+
+PORT    STATE  SERVICE VERSION
+161/tcp closed snmp
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.22 ms 10.2.56.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.74 seconds
+           Raw packets sent: 17 (2.250KB) | Rcvd: 5 (434B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 162 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:50 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating ARP Ping Scan at 14:50
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:50, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:50
+Completed Parallel DNS resolution of 1 host. at 14:50, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:50
+Scanning 10.2.56.1 [1 port]
+Completed SYN Stealth Scan at 14:50, 0.04s elapsed (1 total ports)
+Initiating Service scan at 14:50
+Initiating OS detection (try #1) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Nmap scan report for 10.2.56.1
+Host is up (0.00025s latency).
+
+PORT    STATE  SERVICE  VERSION
+162/tcp closed snmptrap
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.25 ms 10.2.56.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.75 seconds
+           Raw packets sent: 17 (2.250KB) | Rcvd: 5 (434B)
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 443 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:50 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating NSE at 14:50
+Completed NSE at 14:50, 0.00s elapsed
+Initiating ARP Ping Scan at 14:50
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:50, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:50
+Completed Parallel DNS resolution of 1 host. at 14:50, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:50
+Scanning 10.2.56.1 [1 port]
+Discovered open port 443/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 14:50, 0.04s elapsed (1 total ports)
+Initiating Service scan at 14:50
+Scanning 1 service on 10.2.56.1
+Completed Service scan at 14:51, 14.06s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.56.1
+Retrying OS detection (try #2) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:51
+Completed NSE at 14:51, 30.02s elapsed
+Initiating NSE at 14:51
+Stats: 0:01:07 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:51 (0:00:02 remaining)
+Stats: 0:01:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:51 (0:00:04 remaining)
+Stats: 0:01:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:51 (0:00:04 remaining)
+Stats: 0:01:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:51 (0:00:05 remaining)
+Stats: 0:01:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:05 remaining)
+Stats: 0:01:17 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:05 remaining)
+Stats: 0:01:17 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:05 remaining)
+Stats: 0:01:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:19 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:19 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:19 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:19 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 2 (2 waiting)
+NSE Timing: About 75.00% done; ETC: 14:52 (0:00:06 remaining)
+
+root@Kalypso:~/Schreibtisch# nmap -sS -A -p 541 -T4 -v 10.2.56.1
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:52 CET
+NSE: Loaded 151 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating ARP Ping Scan at 14:52
+Scanning 10.2.56.1 [1 port]
+Completed ARP Ping Scan at 14:52, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:52
+Completed Parallel DNS resolution of 1 host. at 14:52, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:52
+Scanning 10.2.56.1 [1 port]
+Discovered open port 541/tcp on 10.2.56.1
+Completed SYN Stealth Scan at 14:52, 0.03s elapsed (1 total ports)
+Initiating Service scan at 14:52
+Scanning 1 service on 10.2.56.1
+Completed Service scan at 14:52, 6.01s elapsed (1 service on 1 host)
+Initiating OS detection (try #1) against 10.2.56.1
+Retrying OS detection (try #2) against 10.2.56.1
+NSE: Script scanning 10.2.56.1.
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.01s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Nmap scan report for 10.2.56.1
+Host is up (0.00035s latency).
+
+PORT    STATE SERVICE     VERSION
+541/tcp open  reverse-ssl SSL/TLS ClientHello
+| fingerprint-strings: 
+|   NULL: 
+|_    {\xe0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port541-TCP:V=7.80%I=7%D=12/3%Time=5DE668A7%P=x86_64-pc-linux-gnu%r(NUL
+SF:L,ED,"\x16\x03\x01\0\xe8\x01\0\0\xe4\x03\x01\xd7\xdb\x05\t\xedH\x98\xc5
+SF:\xe6M\x86\x98V\xd1\x98\x96<\xf2\x12\xeds\x06\xc9\xaa\xca{\\\xe0\xff\x0e
+SF:\xed\x84\0\0r\xc0\x14\xc0\n\xc0\"\xc0!\x009\x008\0\x88\0\x87\xc0\x19\xc
+SF:0\x20\0:\0\x89\xc0\x0f\xc0\x05\x005\0\x84\xc0\x12\xc0\x08\xc0\x1c\xc0\x
+SF:1b\0\x16\0\x13\xc0\x17\xc0\x1a\0\x1b\xc0\r\xc0\x03\0\n\xc0\x13\xc0\t\xc
+SF:0\x1f\xc0\x1e\x003\x002\0E\0D\xc0\x18\xc0\x1d\x004\0F\xc0\x0e\xc0\x04\0
+SF:/\0A\0\x9a\0\x99\0\x9b\0\x96\xc0\x11\xc0\x07\xc0\x16\0\x18\xc0\x0c\xc0\
+SF:x02\0\x05\0\x04\0\xff\x01\0\0I\0\x0b\0\x04\x03\0\x01\x02\0\n\x004\x002\
+SF:0\x0e\0\r\0\x19\0\x0b\0\x0c\0\x18\0\t\0\n\0\x16\0\x17\0\x08\0\x06\0\x07
+SF:\0\x14\0\x15\0\x04\0\x05\0\x12\0\x13\0\x01\0\x02\0\x03\0\x0f\0\x10\0\x1
+SF:1\0#\0\0\0\x0f\0\x01\x01");
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose|firewall
+Running (JUST GUESSING): Linux 2.4.X|2.6.X (98%), Fortinet embedded (95%), D-Link embedded (93%), TRENDnet embedded (93%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6 cpe:/h:dlink:dwl-624%2b cpe:/h:dlink:dwl-2000ap cpe:/h:trendnet:tew-432brp
+Aggressive OS guesses: Tomato 1.27 - 1.28 (Linux 2.4.20) (98%), Linux 2.6.18 - 2.6.22 (98%), Fortinet FortiGate-50B or 310B firewall (95%), Fortinet FortiGate 100D firewall (94%), D-Link DWL-624+ or DWL-2000AP, or TRENDnet TEW-432BRP WAP (93%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.236 days (since Tue Dec  3 09:12:15 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: Broken little-endian incremental
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.35 ms 10.2.56.1
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Initiating NSE at 14:52
+Completed NSE at 14:52, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.25 seconds
+           Raw packets sent: 82 (7.348KB) | Rcvd: 18 (1.436KB)
+root@Kalypso:~/Schreibtisch# nmap -p 1-1024 -T4 -v 10.2.56.200
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:52 CET
+Initiating ARP Ping Scan at 14:52
+Scanning 10.2.56.200 [1 port]
+Completed ARP Ping Scan at 14:52, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:52
+Completed Parallel DNS resolution of 1 host. at 14:53, 13.00s elapsed
+Initiating SYN Stealth Scan at 14:53
+Scanning 10.2.56.200 [1024 ports]
+Discovered open port 135/tcp on 10.2.56.200
+Discovered open port 445/tcp on 10.2.56.200
+Discovered open port 139/tcp on 10.2.56.200
+Discovered open port 983/tcp on 10.2.56.200
+Discovered open port 1001/tcp on 10.2.56.200
+Discovered open port 102/tcp on 10.2.56.200
+Discovered open port 16/tcp on 10.2.56.200
+Discovered open port 32/tcp on 10.2.56.200
+Discovered open port 81/tcp on 10.2.56.200
+Completed SYN Stealth Scan at 14:53, 2.58s elapsed (1024 total ports)
+Nmap scan report for 10.2.56.200
+Host is up (0.00076s latency).
+Not shown: 1015 closed ports
+PORT     STATE SERVICE
+16/tcp   open  unknown
+32/tcp   open  unknown
+81/tcp   open  hosts2-ns
+102/tcp  open  iso-tsap
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+983/tcp  open  unknown
+1001/tcp open  webpush
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 15.78 seconds
+           Raw packets sent: 1211 (53.268KB) | Rcvd: 1025 (41.024KB)
+root@Kalypso:~/Schreibtisch# nmap -sU -p 1-1024 -T4 -v 10.2.56.200
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-03 14:53 CET
+Initiating ARP Ping Scan at 14:53
+Scanning 10.2.56.200 [1 port]
+Completed ARP Ping Scan at 14:53, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:53
+Completed Parallel DNS resolution of 1 host. at 14:53, 13.00s elapsed
+Initiating UDP Scan at 14:53
+Scanning 10.2.56.200 [1024 ports]
+Increasing send delay for 10.2.56.200 from 0 to 50 due to max_successful_tryno increase to 5
+Increasing send delay for 10.2.56.200 from 50 to 100 due to max_successful_tryno increase to 6
+Warning: 10.2.56.200 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.2.56.200 from 100 to 200 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.2.56.200 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+UDP Scan Timing: About 5.58% done; ETC: 15:02 (0:08:45 remaining)
+Increasing send delay for 10.2.56.200 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+
+root@Kalypso:~/Schreibtisch# 
