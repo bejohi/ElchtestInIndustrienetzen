@@ -1,0 +1,334 @@
+root@Kalypso:~/Schreibtisch# nmap -sP 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:21 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00018s latency).
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Nmap scan report for 10.2.56.10
+Host is up (0.0066s latency).
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+Nmap scan report for 10.2.56.40
+Host is up (0.00030s latency).
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+Nmap scan report for 10.2.56.68
+Host is up (0.00085s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.101
+Host is up (0.00040s latency).
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Nmap scan report for 10.2.56.200
+Host is up (0.00028s latency).
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.2.56.254
+Host is up (0.00087s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.55
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 1.53 seconds
+root@Kalypso:~/Schreibtisch# nmap -sP 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:21 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00016s latency).
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Nmap scan report for 10.2.56.10
+Host is up (0.0059s latency).
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+Nmap scan report for 10.2.56.40
+Host is up (0.00030s latency).
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+Nmap scan report for 10.2.56.68
+Host is up (0.00071s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.101
+Host is up (0.00017s latency).
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Nmap scan report for 10.2.56.200
+Host is up (0.00053s latency).
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.2.56.254
+Host is up (0.00092s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.55
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 2.02 seconds
+root@Kalypso:~/Schreibtisch# nmap -sP 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:27 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00017s latency).
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Nmap scan report for 10.2.56.10
+Host is up (0.0082s latency).
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+Nmap scan report for 10.2.56.40
+Host is up (0.00020s latency).
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+Nmap scan report for 10.2.56.68
+Host is up (0.00076s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.101
+Host is up (0.00026s latency).
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Nmap scan report for 10.2.56.200
+Host is up (0.00055s latency).
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.2.56.254
+Host is up (0.00073s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.55
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 1.71 seconds
+root@Kalypso:~/Schreibtisch# nmap -sP 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:31 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00014s latency).
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+Nmap scan report for 10.2.56.10
+Host is up (0.0066s latency).
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+Nmap scan report for 10.2.56.40
+Host is up (0.00030s latency).
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+Nmap scan report for 10.2.56.68
+Host is up (0.00070s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.101
+Host is up (0.00072s latency).
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+Nmap scan report for 10.2.56.200
+Host is up (0.00040s latency).
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+Nmap scan report for 10.2.56.254
+Host is up (0.00069s latency).
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+Nmap scan report for 10.2.56.55
+Host is up.
+Nmap done: 256 IP addresses (8 hosts up) scanned in 1.33 seconds
+root@Kalypso:~/Schreibtisch# nmap -PS -sP 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:34 CET
+
+root@Kalypso:~/Schreibtisch# nmap -PS  10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:34 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00023s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+113/tcp  closed ident
+161/tcp  closed snmp
+443/tcp  open   https
+541/tcp  open   uucp-rlogin
+8000/tcp closed http-alt
+8009/tcp open   ajp13
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Nmap scan report for 10.2.56.10
+Host is up (0.0012s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+84/tcp  open  ctf
+443/tcp open  https
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+
+Nmap scan report for 10.2.56.40
+Host is up (0.00010s latency).
+All 1000 scanned ports on 10.2.56.40 are filtered
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+
+Nmap scan report for 10.2.56.68
+Host is up (0.00070s latency).
+All 1000 scanned ports on 10.2.56.68 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.101
+Host is up (0.00056s latency).
+All 1000 scanned ports on 10.2.56.101 are closed
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Nmap scan report for 10.2.56.200
+Host is up (0.00037s latency).
+Not shown: 984 closed ports
+PORT      STATE SERVICE
+32/tcp    open  unknown
+81/tcp    open  hosts2-ns
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1001/tcp  open  webpush
+2638/tcp  open  sybase
+4002/tcp  open  mlchat-proxy
+5357/tcp  open  wsdapi
+8888/tcp  open  sun-answerbook
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49159/tcp open  unknown
+49160/tcp open  unknown
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 10.2.56.254
+Host is up (0.00077s latency).
+All 1000 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.55
+Host is up (0.0000090s latency).
+All 1000 scanned ports on 10.2.56.55 are closed
+
+Nmap done: 256 IP addresses (8 hosts up) scanned in 23.52 seconds
+root@Kalypso:~/Schreibtisch# nmap -PE 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:36 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00022s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+113/tcp  closed ident
+161/tcp  closed snmp
+443/tcp  open   https
+541/tcp  open   uucp-rlogin
+8000/tcp closed http-alt
+8009/tcp open   ajp13
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Nmap scan report for 10.2.56.10
+Host is up (0.0010s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+84/tcp  open  ctf
+443/tcp open  https
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+
+Nmap scan report for 10.2.56.40
+Host is up (0.000085s latency).
+All 1000 scanned ports on 10.2.56.40 are filtered
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+
+Nmap scan report for 10.2.56.68
+Host is up (0.00096s latency).
+All 1000 scanned ports on 10.2.56.68 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.101
+Host is up (0.00032s latency).
+All 1000 scanned ports on 10.2.56.101 are closed
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Nmap scan report for 10.2.56.200
+Host is up (0.00039s latency).
+Not shown: 984 closed ports
+PORT      STATE SERVICE
+32/tcp    open  unknown
+81/tcp    open  hosts2-ns
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1001/tcp  open  webpush
+2638/tcp  open  sybase
+4002/tcp  open  mlchat-proxy
+5357/tcp  open  wsdapi
+8888/tcp  open  sun-answerbook
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49159/tcp open  unknown
+49160/tcp open  unknown
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 10.2.56.254
+Host is up (0.00074s latency).
+All 1000 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.55
+Host is up (0.0000090s latency).
+All 1000 scanned ports on 10.2.56.55 are closed
+
+Nmap done: 256 IP addresses (8 hosts up) scanned in 21.23 seconds
+root@Kalypso:~/Schreibtisch# nmap -PU 10.2.56.*
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-12-05 12:37 CET
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.2.56.1
+Host is up (0.00022s latency).
+Not shown: 993 filtered ports
+PORT     STATE  SERVICE
+22/tcp   open   ssh
+113/tcp  closed ident
+161/tcp  closed snmp
+443/tcp  open   https
+541/tcp  open   uucp-rlogin
+8000/tcp closed http-alt
+8009/tcp open   ajp13
+MAC Address: 08:5B:0E:93:AC:CE (Fortinet)
+
+Nmap scan report for 10.2.56.10
+Host is up (0.0016s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+84/tcp  open  ctf
+443/tcp open  https
+MAC Address: 20:87:56:5A:00:6C (Siemens AG)
+
+Nmap scan report for 10.2.56.40
+Host is up (0.00020s latency).
+All 1000 scanned ports on 10.2.56.40 are filtered
+MAC Address: 6C:B3:11:25:BE:AD (Shenzhen Lianrui Electronics)
+
+Nmap scan report for 10.2.56.68
+Host is up (0.00080s latency).
+All 1000 scanned ports on 10.2.56.68 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.101
+Host is up (0.00033s latency).
+All 1000 scanned ports on 10.2.56.101 are closed
+MAC Address: 28:63:36:ED:B9:8D (Siemens AG)
+
+Nmap scan report for 10.2.56.200
+Host is up (0.00038s latency).
+Not shown: 984 closed ports
+PORT      STATE SERVICE
+32/tcp    open  unknown
+81/tcp    open  hosts2-ns
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1001/tcp  open  webpush
+2638/tcp  open  sybase
+4002/tcp  open  mlchat-proxy
+5357/tcp  open  wsdapi
+8888/tcp  open  sun-answerbook
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49159/tcp open  unknown
+49160/tcp open  unknown
+MAC Address: 08:00:27:CC:A4:D0 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 10.2.56.254
+Host is up (0.00071s latency).
+All 1000 scanned ports on 10.2.56.254 are filtered
+MAC Address: 00:E0:4C:21:79:34 (Realtek Semiconductor)
+
+Nmap scan report for 10.2.56.55
+Host is up (0.0000090s latency).
+All 1000 scanned ports on 10.2.56.55 are closed
+
+Nmap done: 256 IP addresses (8 hosts up) scanned in 22.62 seconds
+root@Kalypso:~/Schreibtisch# 
